@@ -1,0 +1,25 @@
+{
+  "name": "alternative-me-fng",
+  "private": true,
+  "version": "1.0.0",
+  "main": "generate.mjs",
+  "scripts": {
+    "build": "mkdir -p dist && ./generate.mjs > dist/alternative-me-fng.pine",
+    "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m59peacemaker/pine-alternative-me-fng"
+  },
+  "bugs": "https://github.com/m59peacemaker/pine-alternative-me-fng/issues",
+  "author": "Johnny Hauser <johnnyhauser@gmail.com>",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "debug": "^4.1.0",
+    "got": "^9.3.0",
+    "jsdom": "^13.0.0",
+    "keyv": "^3.1.0",
+    "keyv-file": "^0.1.7",
+    "ramda": "^0.25.0"
+  }
+}
