@@ -5,7 +5,8 @@
   "main": "lib/generate.mjs",
   "scripts": {
     "build": "mkdir -p dist && ./lib/generate.mjs > dist/alternative-me-fng.pine",
-    "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c"
+    "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c",
+		"automated-update": "npm run build && ./lib/publish-build.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "jsdom": "^13.0.0",
     "keyv": "^3.1.0",
     "keyv-file": "^0.1.7",
+    "puppeteer": "^1.10.0",
     "ramda": "^0.25.0"
   }
 }

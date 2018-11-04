@@ -326,9 +326,21 @@ fngValue = year == 2018 ?
 
 //----- RENDER
 
-hline(90, title="Very Extreme Greed", color=#63A924, linewidth=1, linestyle=dotted)
-hline(75, title="Extreme Greed",      color=#63A924, linewidth=1, linestyle=dotted)
-hline(25, title="Extreme Fear",       color=#D35400, linewidth=1, linestyle=dotted)
-hline(10, title="Very Extreme Fear",  color=#D35400, linewidth=1, linestyle=dotted)
+color_neutral = #222222
+color_veryExtremeGreed = #6AFF00
+color_extremeGreed = #63A924
+color_extremeFear = #D35400
+color_veryExtremeFear = #FE4E00
 
-plot(fngValue)
+fngColor = fngValue >= 90 ? color_veryExtremeGreed
+   : fngValue >= 75 ? color_extremeGreed
+   : fngValue <= 10 ? color_veryExtremeFear
+   : fngValue <= 25 ? color_extremeFear
+   : color_neutral
+
+hline(90, title="Very Extreme Greed", color=color_veryExtremeGreed, linewidth=1, linestyle=dotted)
+hline(75, title="Extreme Greed",      color=color_extremeGreed, linewidth=1, linestyle=dotted)
+hline(25, title="Extreme Fear",       color=color_extremeFear, linewidth=1, linestyle=dotted)
+hline(10, title="Very Extreme Fear",  color=color_veryExtremeFear, linewidth=1, linestyle=dotted)
+
+plot(fngValue, linewidth=3, color=fngColor)
