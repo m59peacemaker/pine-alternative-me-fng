@@ -254,7 +254,7 @@
 - timestamp: '2018-06-07T05:00:00.000Z'
   value: 38
 - timestamp: '2018-06-08T05:00:00.000Z'
-  value: '40:'
+  value: 40
 - timestamp: '2018-06-09T05:00:00.000Z'
   value: 39
 - timestamp: '2018-06-10T05:00:00.000Z'
@@ -278,7 +278,7 @@
 - timestamp: '2018-06-19T05:00:00.000Z'
   value: 32
 - timestamp: '2018-06-20T05:00:00.000Z'
-  value: '34:'
+  value: 34
 - timestamp: '2018-06-21T05:00:00.000Z'
   value: 37
 - timestamp: '2018-06-22T05:00:00.000Z'
@@ -551,3 +551,5 @@
   value: 36
 - timestamp: '2018-11-03T05:00:00.000Z'
   value: 36
+- timestamp: '2018-11-04T05:00:00.000Z'
+  value: 41

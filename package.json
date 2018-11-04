@@ -2,9 +2,9 @@
   "name": "alternative-me-fng",
   "private": true,
   "version": "1.0.0",
-  "main": "generate.mjs",
+  "main": "lib/generate.mjs",
   "scripts": {
-    "build": "mkdir -p dist && ./generate.mjs > dist/alternative-me-fng.pine",
+    "build": "mkdir -p dist && ./lib/generate.mjs > dist/alternative-me-fng.pine",
     "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c"
   },
   "repository": {
@@ -17,6 +17,7 @@
   "dependencies": {
     "debug": "^4.1.0",
     "got": "^9.3.0",
+    "js-yaml": "^3.12.0",
     "jsdom": "^13.0.0",
     "keyv": "^3.1.0",
     "keyv-file": "^0.1.7",
