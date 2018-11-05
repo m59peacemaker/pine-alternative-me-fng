@@ -1,0 +1,21 @@
+#!/bin/sh
+
+mkdir -p ./.git/user/scripts
+cp ./scripts/git/filter_secrets ./.git/user/scripts/
+
+git config filter.secrets.clean "./.git/user/scripts/filter_secrets clean"
+git config filter.secrets.smudge "./.git/user/scripts/filter_secrets smudge"
+
+commits=$(git log --oneline 2>/dev/null | wc -l)
+
+if [ $commits -eq 0 ]; then exit 0; fi
+
+git diff-index --quiet HEAD --
+dirty=$?
+
+if [ $dirty -eq 1 ]; then git stash save; fi
+
+rm .git/index
+git checkout HEAD -- "$(git rev-parse --show-toplevel)"
+
+if [ $dirty -eq 1 ]; then git stash pop; fi
