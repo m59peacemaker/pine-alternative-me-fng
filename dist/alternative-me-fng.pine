@@ -1,6 +1,6 @@
 
 //@version=3
-study("Alternative Me Fear & Greed Index [m59]", shorttitle="FnG", precision=0)
+study("alternative.me Crypto Fear & Greed Index [m59]", shorttitle="AltMe FnG", precision=0)
 
 //
 // This script was generated from https://github.com/m59peacemaker/pine-alternative-me-fng
@@ -10,21 +10,30 @@ study("Alternative Me Fear & Greed Index [m59]", shorttitle="FnG", precision=0)
 //
 // ----- DESCRIPTION
 //
+// Crypto Fear & Greed Index is produced by [alternative.me](https://alternative.me/crypto/fear-and-greed-index/).
+// This script is authored by [@m59](https://www.tradingview.com/u/m59/),
+// inpsired by [@bigurb](https://www.tradingview.com/u/bigurb/),
+// and maintained and updated by me with permission.
 //
+// alternative.me description:
+// -------------------
+// The crypto market behaviour is very emotional. People tend to get greedy when the market is rising which results in FOMO (Fear of missing out). Also, people often sell their coins in irrational reaction of seeing red numbers. With our Fear and Greed Index, we try to save you from your own emotional overreations. There are two simple assumptions:
 //
-
-
-//----- INPUTS
-
-
-//----- HELPERS
+// Extreme fear can be a sign that investors are too worried. That could be a buying opportunity.
+// When Investors are getting too greedy, that means the market is due for a correction.
+// Therefore, we analyze the current sentiment of the Bitcoin market and crunch the numbers into a simple meter from 0 to 100. Zero means "Extreme Fear", while 100 means "Extreme Greed".
+//
+// See [alternative.me](https://alternative.me/crypto/fear-and-greed-index/) for further information.
+//
 
 
 //----- VALUES
 
 fngValue = year == 2018 ?
       (month == 11 ?
-         (dayofmonth == 4 ? 41
+         (dayofmonth == 7 ? 48
+         : dayofmonth == 6 ? 42
+         : dayofmonth == 4 ? 41
          : dayofmonth == 3 ? 36
          : dayofmonth == 2 ? 36
          : dayofmonth == 1 ? 29
