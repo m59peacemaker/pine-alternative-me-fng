@@ -553,3 +553,7 @@
   value: 36
 - timestamp: '2018-11-04T05:00:00.000Z'
   value: 41
+- timestamp: '2018-11-06T06:00:00.000Z'
+  value: 42
+- timestamp: '2018-11-07T06:00:00.000Z'
+  value: 48
