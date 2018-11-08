@@ -20,5 +20,8 @@ if [ -n "`git status dist -s`" ]; then
 		git push --quiet build master
 	fi
 
+	echo 'publishing to TradingView...'
 	./lib/publish-build.mjs
+else
+	echo 'indicator is already up-to-date'
 fi
