@@ -2,6 +2,8 @@
 
 set -e
 
+npm install --no-save https://github.com/m59peacemaker/data-alternative-me-fng
+
 npm run build
 
 if [ "$TRAVIS" = "true" ]; then

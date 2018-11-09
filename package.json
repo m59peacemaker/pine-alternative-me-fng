@@ -16,7 +16,6 @@
   "author": "Johnny Hauser <johnnyhauser@gmail.com>",
   "license": "CC0-1.0",
   "dependencies": {
-    "data-alternative-me-fng": "git+https://github.com/m59peacemaker/data-alternative-me-fng.git",
     "puppeteer": "^1.10.0"
   }
 }
