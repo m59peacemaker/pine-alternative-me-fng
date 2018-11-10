@@ -2,11 +2,9 @@
   "name": "alternative-me-fng",
   "private": true,
   "version": "1.0.0",
-  "main": "lib/generate.mjs",
   "scripts": {
-    "build": "mkdir -p dist && ./lib/generate.mjs > dist/alternative-me-fng.pine",
-    "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c",
-    "automated-update": "./lib/automated-update.sh"
+    "build": "mkdir -p dist && lib/generate.mjs > dist/alternative-me-fng.pine",
+    "clip": "npm run build && cat dist/alternative-me-fng.pine | xclip -selection c"
   },
   "repository": {
     "type": "git",
