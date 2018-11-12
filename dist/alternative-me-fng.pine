@@ -38,6 +38,7 @@ fngValue = year == 2018 ?
          : dayofmonth == 8 ? 51
          : dayofmonth == 7 ? 48
          : dayofmonth == 6 ? 42
+         : dayofmonth == 5 ? 42
          : dayofmonth == 4 ? 41
          : dayofmonth == 3 ? 36
          : dayofmonth == 2 ? 36
@@ -340,7 +341,7 @@ fngValue = year == 2018 ?
 
 //----- RENDER
 
-color_neutral = #222222
+color_neutral = #444444
 color_veryExtremeGreed = #6AFF00
 color_extremeGreed = #63A924
 color_extremeFear = #D35400
@@ -352,9 +353,9 @@ fngColor = fngValue >= 90 ? color_veryExtremeGreed
    : fngValue <= 25 ? color_extremeFear
    : color_neutral
 
-hline(90, title="Very Extreme Greed", color=color_veryExtremeGreed, linewidth=1, linestyle=dotted)
-hline(75, title="Extreme Greed",      color=color_extremeGreed, linewidth=1, linestyle=dotted)
-hline(25, title="Extreme Fear",       color=color_extremeFear, linewidth=1, linestyle=dotted)
-hline(10, title="Very Extreme Fear",  color=color_veryExtremeFear, linewidth=1, linestyle=dotted)
+hline(90, title="Very Extreme Greed", color=color_veryExtremeGreed, linewidth=2, linestyle=solid)
+hline(75, title="Extreme Greed",      color=color_extremeGreed, linewidth=2, linestyle=solid)
+hline(25, title="Extreme Fear",       color=color_extremeFear, linewidth=2, linestyle=solid)
+hline(10, title="Very Extreme Fear",  color=color_veryExtremeFear, linewidth=2, linestyle=solid)
 
-plot(fngValue, linewidth=3, color=fngColor)
+plot(fngValue, color=fngColor, linewidth=3, style=areabr)
