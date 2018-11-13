@@ -4,11 +4,6 @@ set -e
 
 build_commit_message="[build]"
 
-if [ "${TRAVIS_COMMIT_MESSAGE}" = "${build_commit_message}" ]; then
-	echo "This job was triggered by the build commit. Skipping build."
-	exit 0
-fi
-
 npm install --no-save https://github.com/m59peacemaker/data-alternative-me-fng
 
 npm run build
