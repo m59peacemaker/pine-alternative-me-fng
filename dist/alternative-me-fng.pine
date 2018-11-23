@@ -31,7 +31,8 @@ study("alternative.me Crypto Fear & Greed Index [m59]", shorttitle="AltMe FnG", 
 
 fngValue = year == 2018 ?
       (month == 11 ?
-         (dayofmonth == 22 ? 14
+         (dayofmonth == 23 ? 12
+         : dayofmonth == 22 ? 14
          : dayofmonth == 21 ? 15
          : dayofmonth == 20 ? 21
          : dayofmonth == 19 ? 28
