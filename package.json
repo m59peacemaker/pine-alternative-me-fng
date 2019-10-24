@@ -14,6 +14,7 @@
   "author": "Johnny Hauser <johnnyhauser@gmail.com>",
   "license": "CC0-1.0",
   "dependencies": {
+    "axios": "^0.19.0",
     "puppeteer": "^1.10.0"
   }
 }
